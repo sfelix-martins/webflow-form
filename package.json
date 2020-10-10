@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@smartins/webflow-form",
+  "author": "Samuel Martins",
+  "description": "A simple package to handle with webflow forms.",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
+}
