@@ -4,10 +4,10 @@ Setup your form to send some request and control the success and failing flow.
 
 ## Usage
 
-Embed the package script in your webflow project:
+Embed the package script in your webflow project and call the function `setUpWebflowForm` passing your form id. E.g.:
 
 ```html
-<script onload="setUpWebflowForm('wf-form-Email-Form')" src="https://unpkg.com/@smartins/webflow-form/dist/index.js"></script>
+<script onload="setUpWebflowForm('wf-form-Email-Form')" src="https://unpkg.com/@smartins/webflow-form"></script>
 ```
 
 ## TODO
