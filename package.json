@@ -18,7 +18,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@smartins/webflow-form",
+  "name": "@smartinsf/webflow-form",
   "author": "Samuel Martins",
   "description": "A simple package to handle with webflow forms.",
   "devDependencies": {
