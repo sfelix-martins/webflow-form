@@ -1,7 +1,7 @@
 interface WebflowFormOptions {
   /**
    * The name of the attribute from form's submit button that contains the value
-   * that will be shown during request.
+   * that will be shown on button text during request.
    */
   waitTextAttributeName?: string;
 
@@ -25,11 +25,10 @@ interface WebflowFormOptions {
 /**
  * Register an webflow form to send request to some backend!
  *
- * @param {string} id - The id of the form element
- * @param {(data): any} prepareData .
+ * @param {string} name - The name of the form defined on form block settings
  */
 function setUpWebflowForm(
-  id: string,
+  name: string,
   {
     waitTextAttributeName = 'data-wait',
     doneBlockSelector = '.w-form-done',
@@ -37,6 +36,8 @@ function setUpWebflowForm(
     prepareData = (data) => data,
   }: WebflowFormOptions
 ) {
+  const id = `wf-form-${name}`;
+
   const form: HTMLFormElement = document.getElementById(id) as HTMLFormElement;
   if (!form) {
     console.error(`Form with id "${id}" not found!`);
