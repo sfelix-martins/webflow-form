@@ -48,8 +48,7 @@ function setUpWebflowForm(
 
     const inputSubmit: HTMLInputElement = document.activeElement as HTMLInputElement;
     if (!inputSubmit) {
-      console.error('Cannot get the submit input');
-      return;
+      throw new Error('Cannot get the submit input. Make sure add a "Form Button" to your form.');
     }
 
     const waitingText = inputSubmit.getAttribute(waitTextAttributeName) ?? 'Submitting...';
