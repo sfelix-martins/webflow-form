@@ -16,7 +16,7 @@ Configure your form id, action and method. E.g.:
 Continuing... embed the package script in your webflow project and call the function `setUpWebflowForm` passing your form name (The same defined on form settings above). E.g.:
 
 ```html
-<script onload="setUpWebflowForm('contact-form')" src="https://unpkg.com/@smartins/webflow-form"></script>
+<script onload="setUpWebflowForm('contact-form')" src="https://unpkg.com/@smartinsf/webflow-form"></script>
 ```
 
 **Hint:** Click [here](https://university.webflow.com/lesson/custom-code-embed) for more details how to add an embed.
