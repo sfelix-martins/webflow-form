@@ -40,8 +40,7 @@ function setUpWebflowForm(
 
   const form: HTMLFormElement = document.getElementById(id) as HTMLFormElement;
   if (!form) {
-    console.error(`Form with id "${id}" not found!`);
-    return;
+    throw new Error(`Form with id "${id}" not found!`);
   }
 
   form.onsubmit = function (e) {
@@ -57,8 +56,7 @@ function setUpWebflowForm(
     const defaultText = inputSubmit.getAttribute('value') ?? 'Submit';
     const container = form.parentNode;
     if (!container) {
-      console.error('Failed getting parent node of the form with done and fail blocks!');
-      return;
+      throw new Error('Failed getting parent node of the form with done and fail blocks!');
     }
     const doneBlock: HTMLDivElement = container.querySelector(doneBlockSelector) as HTMLDivElement;
     const failBlock: HTMLDivElement = container.querySelector(failBlockSelector) as HTMLDivElement;
