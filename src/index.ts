@@ -34,7 +34,7 @@ function setUpWebflowForm(
     doneBlockSelector = '.w-form-done',
     failBlockSelector = '.w-form-fail',
     prepareData = (data) => data,
-  }: WebflowFormOptions
+  }: WebflowFormOptions = {}
 ) {
   const id = `wf-form-${name}`;
 
