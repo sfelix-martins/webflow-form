@@ -6,9 +6,10 @@ Setup your form to send some request and control the success and failing flow.
 
 Configure your form id, action and method. E.g.:
 
-<img src="form-settings-sample.png" alt="Form settings sample"></img>
+![Form settings sample](form-settings-sample.png)
 
 **IMPORTANT**: Set your form name in lowercase, without accents or special characters and with words separated by `-`.
+
 - Bad: `@my form`, `Fomulário de contato`.
 - Good: `contact-form`, `newsletter`, `ebook-request`.
 

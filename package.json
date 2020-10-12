@@ -12,6 +12,18 @@
     "build": "tsc",
     "prepare": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfelix-martins/webflow-form.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sfelix-martins/webflow-form/issues"
+  },
+  "keywords": [
+    "webflow",
+    "forms",
+    "embed"
+  ],
   "peerDependencies": {},
   "prettier": {
     "printWidth": 80,
