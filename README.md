@@ -48,7 +48,3 @@ setUpWebflowForm('contact-form', {
 })
 
 ```
-
-## TODO
-
-- Unit tests
