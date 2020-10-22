@@ -2,11 +2,14 @@
 
 Setup your form to send some request and control the success and failing flow.
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sfelix-martins/webflow-form/CI)
+[![codecov](https://codecov.io/gh/sfelix-martins/webflow-form/branch/master/graph/badge.svg)](https://codecov.io/gh/sfelix-martins/webflow-form)
+
 ## Usage
 
-Configure your form id, action and method. E.g.:
+Configure your Form Name, Action and Method. E.g.:
 
-![Form settings sample](form-settings-sample.png)
+![Form settings sample](docs/form-settings-sample.png)
 
 **IMPORTANT**: Set your form name in lowercase, without accents or special characters and with words separated by `-`.
 

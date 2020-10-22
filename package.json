@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,12 @@
   "author": "Samuel Martins",
   "description": "A simple package to handle with webflow forms.",
   "devDependencies": {
-    "typescript": "^4.0.3"
+    "@types/jest": "^26.0.14",
+    "@types/jsdom": "^16.2.4",
+    "jest": "^26.5.3",
+    "jsdom": "^16.4.0",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3",
+    "xhr-mock": "^2.5.1"
   }
 }
