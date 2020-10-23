@@ -2,10 +2,8 @@ export function getFormData(form) {
   if (!form || form.nodeName !== 'FORM') {
     return;
   }
-  var i,
-    j,
-    data = {};
-  for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+  const data: object = {};
+  for (let i = form.elements.length - 1; i >= 0; i = i - 1) {
     if (form.elements[i].name === '') {
       continue;
     }
@@ -22,6 +20,18 @@ export function getFormData(form) {
             data[form.elements[i].name] = form.elements[i].value;
             break;
           case 'checkbox':
+            if (form.elements[i].checked) {
+              const checkValue = data[form.elements[i].name];
+              if (checkValue) {
+                data[form.elements[i].name] = [
+                  form.elements[i].value,
+                  ...checkValue,
+                ];
+              } else {
+                data[form.elements[i].name] = [form.elements[i].value];
+              }
+            }
+            break;
           case 'radio':
             if (form.elements[i].checked) {
               data[form.elements[i].name] = form.elements[i].value;
@@ -40,20 +50,25 @@ export function getFormData(form) {
             data[form.elements[i].name] = form.elements[i].value;
             break;
           case 'select-multiple':
-            for (j = form.elements[i].options.length - 1; j >= 0; j = j - 1) {
+            for (
+              let j = form.elements[i].options.length - 1;
+              j >= 0;
+              j = j - 1
+            ) {
               if (form.elements[i].options[j].selected) {
-                data[form.elements[i].name] = form.elements[i].options[j].value;
+                const selectedOption = data[form.elements[i].name];
+                if (selectedOption) {
+                  data[form.elements[i].name] = [
+                    form.elements[i].options[j].value,
+                    ...selectedOption,
+                  ];
+                } else {
+                  data[form.elements[i].name] = [
+                    form.elements[i].options[j].value,
+                  ];
+                }
               }
             }
-            break;
-        }
-        break;
-      case 'BUTTON':
-        switch (form.elements[i].type) {
-          case 'reset':
-          case 'submit':
-          case 'button':
-            data[form.elements[i].name] = form.elements[i].value;
             break;
         }
         break;
